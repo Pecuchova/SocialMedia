@@ -31,6 +31,10 @@ const globalStyle = StyleSheet.create({
         fontFamily: getFontFamily("Inter_18pt", "600"),
         fontSize: 6,
     },
+    userStoryContainer: {
+        marginTop: 20,
+        marginHorizontal: 28,
+    },
 });
 
 export default globalStyle;
