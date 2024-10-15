@@ -7,7 +7,7 @@ const Title = props => {
     return <Text style={style.title}>{props.title}</Text>;
 }
 
-Title.PropTypes = {
+Title.propTypes = {
     title: PropTypes.string.isRequired,
 }
 
