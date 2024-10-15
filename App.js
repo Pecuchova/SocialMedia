@@ -6,6 +6,54 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import globalStyle from "./assets/styles/globalStyle";
 
 const App = () => {
+  const userStories = [
+    {
+      firstName: "Joseph",
+      id: 1,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Angel",
+      id: 2,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "White",
+      id: 3,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Olivier",
+      id: 4,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Janka",
+      id: 5,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Nicolas",
+      id: 6,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Adam",
+      id: 7,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Noah",
+      id: 8,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Nathaniel",
+      id: 9,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+  ];
+
   return (
  <SafeAreaView>
   <View 
