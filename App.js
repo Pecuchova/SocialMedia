@@ -3,7 +3,7 @@ import { SafeAreaView, TouchableOpacity, View, Text } from "react-native";
 import Title from "./components/Title/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import globalStyle from "./assets/fonts/styles/globalStyle";
+import globalStyle from "./assets/styles/globalStyle";
 
 const App = () => {
   return (
