@@ -23,8 +23,8 @@ const globalStyle = StyleSheet.create({
         height: 10,
         borderRadius: 10,
         position: "absolute",
-        right: 10,
-        marginTop: 12,
+        right: -4,
+        marginTop: -2,
     },
     messageNumber: {
         color: "#FFF",
