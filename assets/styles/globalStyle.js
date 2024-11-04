@@ -3,19 +3,19 @@ import { getFontFamily } from "../fonts/helper";
 
 const globalStyle = StyleSheet.create({
     header: {
-        marginRight: 17, 
-        marginLeft: 27, 
+        marginRight: 17,
+        marginLeft: 27,
         marginTop: 30,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
     },
-    envelopeIcon:{
-        padding:14, 
-        borderRadius: 100, 
-        backgroundColor:"#F9FAFB",
+    envelopeIcon: {
+        padding: 14,
+        borderRadius: 100,
+        backgroundColor: "#F9FAFB",
     },
-    messageNumberContainer:{
+    messageNumberContainer: {
         backgroundColor: "#F35BAC",
         justifyContent: "center",
         flexDirection: "row",
