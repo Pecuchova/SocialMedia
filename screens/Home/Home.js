@@ -7,8 +7,10 @@ import style from './style';
 import UserStory from "../../components/UserStory/UserStory";
 import UserPost from '../../components/UserPost/UserPost';
 import globalStyle from '../../assets/styles/globalStyle';
+import { Routes } from '../../navigation/Routes';
+import Profile from '../Profile/Profile';
 
-const Home = () => {
+const Home = ({ navigation }) => {
     const userStories = [
         {
             firstName: "Joseph",
@@ -154,7 +156,7 @@ const Home = () => {
                         <>
                             <View style={style.header}>
                                 <Title title={'Let’s Explore'} />
-                                <TouchableOpacity style={style.messageIcon}>
+                                <TouchableOpacity style={style.messageIcon} onPress={() => { navigation.navigate(Routes.Profile) }}>
                                     <FontAwesomeIcon
                                         icon={faEnvelope}
                                         size={20}

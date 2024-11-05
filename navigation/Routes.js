@@ -1,3 +1,4 @@
 export const Routes = {
-    HOME: 'Home',
+    Home: 'Home',
+    Profile: 'Profile',
 };
