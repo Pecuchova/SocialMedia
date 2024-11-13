@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, TouchableOpacity, View, Text, FlatList } from "react-native";
+import { SafeAreaView, TouchableOpacity, View, Text, FlatList, Dimensions } from "react-native";
 import Title from '../../components/Title/Title';
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -9,6 +9,8 @@ import UserPost from '../../components/UserPost/UserPost';
 import globalStyle from '../../assets/styles/globalStyle';
 import { Routes } from '../../navigation/Routes';
 import Profile from '../Profile/Profile';
+
+
 
 const Home = ({ navigation }) => {
     const userStories = [
@@ -127,6 +129,10 @@ const Home = ({ navigation }) => {
     const [userPostsRenderedData, setUserPostsRenderedData] = useState([]);
     const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
+    const [screenData, setScreenData] = useState(Dimensions.get('screen'));
+    console.log(screenData);
+
+
     const pagination = (database, currentPage, pageSize) => {
         const startIndex = (currentPage - 1) * pageSize;
         const endIndex = startIndex + pageSize;
@@ -146,10 +152,17 @@ const Home = ({ navigation }) => {
         const getInitialDataPosts = pagination(userPosts, 1, userPostsPageSize);
         setUserPostsRenderedData(getInitialDataPosts);
         setIsLoadingUserPosts(false);
+
+        Dimensions.addEventListener("change", (result) => {
+            setScreenData(result.screen);
+        });
     }, []);
 
     return (
         <SafeAreaView style={globalStyle.backgroundWhite}>
+            <View style={{ backgroundColor: "red", width: screenData.width / 2, height: screenData.height / 2 }}>
+                <Text>Text ... </Text>
+            </View>
             <View>
                 <FlatList
                     ListHeaderComponent={
