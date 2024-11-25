@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, Text, Image, ScrollView, View, TouchableOpacity } from "react-native";
 import globalStyle from "../../assets/styles/globalStyle";
+import { ProfileTabsNavigation } from "../../navigation/MainNavigation";
 import style from "./style";
 
 const Profile = ({ navigation }) => {
@@ -9,33 +10,34 @@ const Profile = ({ navigation }) => {
             <ScrollView contentContainerStyle={globalStyle.flexGrow}>
                 <View style={style.profileImageContainer}>
                     <View style={style.profileImageContent}>
-                        <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Image
-                                style={style.profileImage}
-                                source={require('../../assets/images/default_profile.png')}
-                            />
-                        </TouchableOpacity>
+                        <Image
+                            style={style.profileImage}
+                            source={require('../../assets/images/default_profile.png')}
+                        />
                     </View>
                 </View>
-                <Text style={style.userName}>Janka Pecuchová</Text>
+                <Text style={style.userName}>Emmanuel Robertsen</Text>
                 <View style={style.statContainer}>
                     <View>
-                        <Text style={style.statAmount}>150</Text>
+                        <Text style={style.statAmount}>45</Text>
                         <Text style={style.statType}>Following</Text>
                     </View>
                     <View style={style.statBorder} />
                     <View>
-                        <Text style={style.statAmount}>100</Text>
+                        <Text style={style.statAmount}>30M</Text>
                         <Text style={style.statType}>Followers</Text>
                     </View>
                     <View style={style.statBorder} />
                     <View>
-                        <Text style={style.statAmount}>10</Text>
+                        <Text style={style.statAmount}>100</Text>
                         <Text style={style.statType}>Posts</Text>
                     </View>
                 </View>
+                {/* <View style={globalStyle.flex}>
+                    <ProfileTabsNavigation />
+                </View> */}
             </ScrollView>
-        </SafeAreaView >
+        </SafeAreaView>
     );
 };
 
